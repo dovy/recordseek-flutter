@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:intro_slider/dot_animation_enum.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:intro_slider/slide_object.dart';
-import 'package:recordseek/second.dart';
+import 'package:RecordSeek/second.dart';
 import 'package:regexed_validator/regexed_validator.dart';
 
 class SliderPage extends StatefulWidget {
@@ -35,6 +35,8 @@ class _MyHomePageState extends State<SliderPage> {
             fontSize: 20.0,
             fontStyle: FontStyle.italic),
         pathImage: 'assets/images/url.png',
+        backgroundColor: Color(0xfff5a623),
+
       ),
     );
     slides.add(
@@ -54,6 +56,8 @@ class _MyHomePageState extends State<SliderPage> {
 //                  fontStyle: FontStyle.italic,
             fontFamily: 'Roboto'),
         pathImage: 'assets/images/share.png',
+        backgroundColor: Color(0xff203152),
+
       ),
     );
   }

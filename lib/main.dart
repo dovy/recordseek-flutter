@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:intro_slider/slide_object.dart';
 import 'package:receive_sharing_intent/receive_sharing_intent.dart';
-import 'package:recordseek/slider.dart';
+import 'package:RecordSeek/slider.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'RecordSeek',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        backgroundColor: Color(0xfFFFFFF)
       ),
       home: MyHomePage(title: 'Instructions'),
     );
