@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.recordseek.recordseek">
+    package="com.simplerain.recordseek">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
@@ -8,7 +8,7 @@
         android:label="RecordSeek"
         android:icon="@mipmap/ic_launcher">
         <activity
-            android:name="com.recordseek.recordseek.MainActivity"
+            android:name="com.simplerain.recordseek.MainActivity"
             android:launchMode="singleTop"
             android:theme="@style/LaunchTheme"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"

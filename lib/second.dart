@@ -14,8 +14,6 @@ class SecondClass extends StatefulWidget {
   SecondPageState createState() => SecondPageState();
 }
 
-
-
 class SecondPageState extends State<SecondClass> {
 
   bool alreadyEvaluated = false;

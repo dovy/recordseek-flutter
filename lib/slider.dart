@@ -20,6 +20,44 @@ class _MyHomePageState extends State<SliderPage> {
   List<Slide> slides = new List();
   Function goToTab;
 
+  getSlides() {
+    slides.add(
+      new Slide(
+        title: "Select URL",
+        styleTitle: TextStyle(
+            color: Color(0xff507192),
+            fontSize: 36,
+            fontWeight: FontWeight.bold),
+        description:
+        "Open any web browser and navigate to the website you would like to share.",
+        styleDescription: TextStyle(
+            color: Color(0xff444444),
+            fontSize: 20.0,
+            fontStyle: FontStyle.italic),
+        pathImage: 'assets/images/url.png',
+      ),
+    );
+    slides.add(
+      new Slide(
+        title: "Share",
+        styleTitle: TextStyle(
+            color: Color(0xff507192),
+            fontSize: 26.0,
+//                  fontWeight: FontWeight.bold,
+            fontFamily: 'Roboto'
+        ),
+        description:
+        "Click on `Share` button. Now choose the RecordSeek application from the sharing panel.",
+        styleDescription: TextStyle(
+            color: Color(0xff444444),
+            fontSize: 16.0,
+//                  fontStyle: FontStyle.italic,
+            fontFamily: 'Roboto'),
+        pathImage: 'assets/images/share.png',
+      ),
+    );
+  }
+
   @override
   void initState() {
 
@@ -32,82 +70,15 @@ class _MyHomePageState extends State<SliderPage> {
               builder: (context) => SecondClass(Uri.decodeFull(widget._url)),
             ));
         setState(() {
-          slides.add(
-            new Slide(
-              title: "Select URL",
-              styleTitle: TextStyle(
-                  color: Colors.black54,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold),
-              description:
-              "Open any web browser and navigate to the website you would like to share.",
-              styleDescription: TextStyle(
-                  color: Color(0xfffe9c8f),
-                  fontSize: 20.0,
-                  fontStyle: FontStyle.italic),
-              pathImage: 'assets/images/url.png',
-            ),
-          );
-          slides.add(
-            new Slide(
-              title: "Share",
-              styleTitle: TextStyle(
-                  color: Colors.black54,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'RobotoMono'),
-              description:
-              "Click on 'Share' button. Now choose the RecordSeek application from the sharing panel.",
-              styleDescription: TextStyle(
-                  color: Color(0xfffe9c8f),
-                  fontSize: 20.0,
-                  fontStyle: FontStyle.italic,
-                  fontFamily: 'Raleway'),
-              pathImage: 'assets/images/share.png',
-            ),
-          );
+          getSlides();
         });
 
       });
     }
     else{
       setState(() {
-        slides.add(
-          new Slide(
-            title: "Select URL",
-            styleTitle: TextStyle(
-                color: Colors.black54,
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold),
-            description:
-            "Open any web browser then navigate to the website you would like to cite.",
-            styleDescription: TextStyle(
-                color: Color(0xfffe9c8f),
-                fontSize: 20.0,
-                fontStyle: FontStyle.italic),
-            pathImage: 'assets/images/url.png',
-          ),
-        );
-        slides.add(
-          new Slide(
-            title: "Share",
-            styleTitle: TextStyle(
-                color: Colors.black54,
-                fontSize: 30.0,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'RobotoMono'),
-            description:
-            "Then click on 'Share' button and choose the RecordSeek icon from the sharing panel.",
-            styleDescription: TextStyle(
-                color: Color(0xfffe9c8f),
-                fontSize: 20.0,
-                fontStyle: FontStyle.italic,
-                fontFamily: 'Raleway'),
-            pathImage: 'assets/images/share.png',
-          ),
-        );
+        getSlides();
       });
-
     }
   }
 
@@ -127,7 +98,7 @@ class _MyHomePageState extends State<SliderPage> {
   Widget renderNextBtn() {
     return Icon(
       Icons.navigate_next,
-      color: Color(0xffffcc5c),
+      color: Color(0xff18bc9c),
       size: 35.0,
     );
   }
@@ -135,14 +106,14 @@ class _MyHomePageState extends State<SliderPage> {
   Widget renderDoneBtn() {
     return Icon(
       Icons.done,
-      color: Color(0xffffcc5c),
+      color: Color(0xff18bc9c),
     );
   }
 
   Widget renderSkipBtn() {
     return Icon(
       Icons.skip_next,
-      color: Color(0xffffcc5c),
+      color: Color(0xff18bc9c),
     );
   }
 
@@ -200,8 +171,8 @@ class _MyHomePageState extends State<SliderPage> {
 
               // Skip button
               renderSkipBtn: this.renderSkipBtn(),
-              colorSkipBtn: Color(0x33ffcc5c),
-              highlightColorSkipBtn: Color(0xffffcc5c),
+              colorSkipBtn: Color(0x3318bc9c),
+              highlightColorSkipBtn: Color(0xff18bc9c),
 
               // Next button
               renderNextBtn: this.renderNextBtn(),
@@ -209,11 +180,11 @@ class _MyHomePageState extends State<SliderPage> {
               // Done button
               renderDoneBtn: this.renderDoneBtn(),
               onDonePress: this.onDonePress,
-              colorDoneBtn: Color(0x33ffcc5c),
-              highlightColorDoneBtn: Color(0xffffcc5c),
+              colorDoneBtn: Color(0x3318bc9c),
+              highlightColorDoneBtn: Color(0xff18bc9c),
 
               // Dot indicator
-              colorDot: Color(0xffffcc5c),
+              colorDot: Color(0xff18bc9c),
               sizeDot: 11.0,
               typeDotAnimation: dotSliderAnimation.SIZE_TRANSITION,
 
